@@ -190,11 +190,6 @@ def main():
     #         split_id=0,
     #         verbose=True
     #     )
-    #     print("\n测试结果：")
-    #     print(f"准确率: {result['accuracy']:.4f}")
-    #     print(f"精确率: {result['precision']:.4f}")
-    #     print(f"召回率: {result['recall']:.4f}")
-    #     print(f"F1值: {result['f1']:.4f}")
     # except Exception as e:
     #     print(f"测试出错：{e}")
     
