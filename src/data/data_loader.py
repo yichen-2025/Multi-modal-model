@@ -2,7 +2,7 @@ import torch
 import numpy as np
 import os
 from datasets import Dataset
-from ..models.bert_encoder import BertEncoder
+from ..model_architectures.bert_encoder import BertEncoder
 
 
 def generate_mock_data(num_samples=100):
