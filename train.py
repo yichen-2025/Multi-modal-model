@@ -5,7 +5,7 @@ import os
 import time
 import pandas as pd
 from transformers import Trainer, TrainingArguments, AutoTokenizer, TrainerCallback
-from src.models.multi_modal_model import MultiModalFusionModel
+from src.model_architectures.multi_modal_model import MultiModalFusionModel
 from src.data.data_loader import generate_mock_data, load_real_data, load_split_data, collate_fn
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))

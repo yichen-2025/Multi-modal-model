@@ -372,7 +372,7 @@ class TestEncoders:
     def test_numeric_encoder(self, split_data):
         sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
         
-        from src.models.numeric_encoder import NumericEncoder
+        from src.model_architectures.numeric_encoder import NumericEncoder
         
         encoder = NumericEncoder(input_dim=9)
         
@@ -388,7 +388,7 @@ class TestEncoders:
     def test_bert_encoder(self, split_data):
         sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
         
-        from src.models.bert_encoder import BertEncoder
+        from src.model_architectures.bert_encoder import BertEncoder
         
         encoder = BertEncoder(local_model_path="./models/bert")
         encoder.eval()
@@ -467,7 +467,7 @@ class TestModelTesting:
     def test_model_load(self, trained_model, split_data):
         sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
         
-        from src.models.multi_modal_model import MultiModalFusionModel
+        from src.model_architectures.multi_modal_model import MultiModalFusionModel
         
         _, model_path = trained_model
         _, dataset_id, split_id = split_data
@@ -482,7 +482,7 @@ class TestModelTesting:
     def test_model_inference(self, trained_model, split_data):
         sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
         
-        from src.models.multi_modal_model import MultiModalFusionModel
+        from src.model_architectures.multi_modal_model import MultiModalFusionModel
         from src.data.data_loader import load_split_data
         
         _, model_path = trained_model

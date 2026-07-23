@@ -9,7 +9,7 @@ from datetime import datetime
 import pandas as pd
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
 from transformers import AutoTokenizer
-from src.models.multi_modal_model import MultiModalFusionModel
+from src.model_architectures.multi_modal_model import MultiModalFusionModel
 from src.data.data_loader import load_real_data, generate_mock_data, load_split_data
 
 REPORTS_DIR = "./test_reports"
