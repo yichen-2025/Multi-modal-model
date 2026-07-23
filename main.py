@@ -13,10 +13,51 @@
 注意：请按照顺序逐步取消注释执行，确保每一步完成后再执行下一步
 """
 
+import os
+
 from extract_subset import extract_subset
 from split_modality import split_modality
 from train import train_model
 from test_model import test_model
+
+
+def create_necessary_directories():
+    """
+    创建项目所需的目录（被.gitignore忽略的目录）
+    
+    这些目录在首次运行时可能不存在，需要提前创建以避免FileNotFoundError
+    
+    创建的目录列表：
+    - processed_dataset/: 处理后的数据
+    - split_data/: 划分后的数据
+    - saved_models/: 训练模型
+    - logs/subset/: 子集提取日志
+    - logs/split/: 数据划分日志
+    - logs/training/: 模型训练日志
+    - test_reports/: 测试报告
+    """
+    directories = [
+        "processed_dataset",
+        "split_data",
+        "saved_models",
+        "logs/subset",
+        "logs/split",
+        "logs/training",
+        "test_reports"
+    ]
+    
+    created_dirs = []
+    for dir_path in directories:
+        if not os.path.exists(dir_path):
+            os.makedirs(dir_path, exist_ok=True)
+            created_dirs.append(dir_path)
+    
+    if created_dirs:
+        print("创建了以下目录：")
+        for dir_path in created_dirs:
+            print(f"  - {dir_path}")
+    else:
+        print("所有必要目录已存在")
 
 
 def plot_loss_curve(model_id):
@@ -52,6 +93,9 @@ def main():
     2. 第一步完成后，注释第一步，取消注释第二步
     3. 依次执行后续步骤
     """
+    
+    # 创建必要的目录（被.gitignore忽略的目录）
+    create_necessary_directories()
     
     # ============================================
     # 步骤1：数据清洗
