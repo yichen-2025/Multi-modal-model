@@ -1,9 +1,5 @@
 # 多模态融合网络流量分类模型
 
-![Python](https://img.shields.io/badge/python-3.10+-blue.svg)
-![PyTorch](https://img.shields.io/badge/pytorch-2.0+-orange.svg)
-![Transformers](https://img.shields.io/badge/transformers-4.30+-yellow.svg)
-
 基于多模态融合的网络流量恶意检测模型，结合统计特征模态和文本描述模态进行流量分类。
 
 ## 项目简介
@@ -273,7 +269,3 @@ python -m pytest test_project.py -v
 ## 项目原理
 
 详细的项目原理说明请参考 `docs/theory.md`。
-
-## 许可证
-
-MIT License
